@@ -7,6 +7,9 @@ class SelectionPage extends StatefulWidget {
   State<SelectionPage> createState() => _SelectionPageState();
 }
 bool isChecked = false;
+ // 現在日時
+  DateTime _date = new DateTime.now();
+  
 class _SelectionPageState extends State<SelectionPage> {
   @override
   Widget build(BuildContext context) {
@@ -23,8 +26,13 @@ class _SelectionPageState extends State<SelectionPage> {
                });
              },
            ),
-
-           Chip(label: Text(isChecked ? 'Checked' : 'Unchecked')), // チェック状態に応じて表示を変更
+           Chip(
+            label: Text(isChecked ? 'Checked' : 'Unchecked',
+            )), // チェック状態に応じて表示を変更
+            SizedBox(height: 20),
+            ElevatedButton(onPressed: () {
+              Navigator.pop(context);
+            }, child: Text('DatePicker Page')),
           ],
         ),
       ),
