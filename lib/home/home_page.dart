@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 enum WordEntry {
-  apple(term: 'analytics', meaning: 'アナリティクス'),
-  banana(term: 'delete', meaning: 'デリート'),
-  orange(term: 'sign in', meaning: 'サインイン'),
-  grape(term: 'hosting', meaning: 'ホスティング'),;
+  analytics(term: 'analytics', meaning: 'アナリティクス'),
+  delete(term: 'delete', meaning: 'デリート'),
+  signIn(term: 'sign in', meaning: 'サインイン'),
+  hosting(term: 'hosting', meaning: 'ホスティング');
   
 
   const WordEntry({required this.term, required this.meaning});
