@@ -1,17 +1,7 @@
+import 'package:entan_app/domain/wordentry.dart';
 import 'package:flutter/material.dart';
 
-enum WordEntry {
-  analytics(term: 'analytics', meaning: 'アナリティクス'),
-  delete(term: 'delete', meaning: 'デリート'),
-  signIn(term: 'sign in', meaning: 'サインイン'),
-  hosting(term: 'hosting', meaning: 'ホスティング');
-  
 
-  const WordEntry({required this.term, required this.meaning});
-
-  final String term;
-  final String meaning;
-}
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -23,8 +13,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  static const List<WordEntry> _words = WordEntry.values;
-
+  final List<WordEntry> _words = WordEntry.values;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
