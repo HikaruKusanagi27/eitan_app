@@ -1,4 +1,5 @@
 import 'package:entan_app/domain/wordentry.dart';
+import 'package:entan_app/text_input.dart';
 import 'package:flutter/material.dart';
 
 
@@ -46,6 +47,17 @@ class _HomePageState extends State<HomePage> {
             );
           },
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const TextInput(),
+            ),
+          );
+        },
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
       ),
     );
   }
