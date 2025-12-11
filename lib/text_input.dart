@@ -12,11 +12,28 @@ class _TextInputState extends State<TextInput> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Text Input'),
+        title: Center(child: Text('Word Registration')),
       ),
-      body: Center(
-        child: Text('This is the Text Input Page'),
-      ),
+      body: Column(
+        children: [
+          TextField(
+            decoration: InputDecoration(
+              labelText: 'input text',
+            ),
+          ),
+          TextField(
+            decoration: InputDecoration(
+              labelText: 'input text',
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () { 
+              
+            },
+            child: Text('Registration'),
+          ),
+        ],
+      ),  
     ) ;
   }
 }
