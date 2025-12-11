@@ -28,18 +28,31 @@ class _NavigationPageState extends State<NavigationPage> {
               ),
             ),
           ),
+          // NavigationRailの実装の仕方が分からないため、一旦コメントアウトします。
+          // NavigationRail(destinations: const [
+          //   NavigationRailDestination(
+          //     icon: Icon(Icons.home),
+          //     label: Text('Home'),
+          //   ),
+          //   NavigationRailDestination(
+          //     icon: Icon(Icons.settings),
+          //     label: Text('Settings'),
+          //   ),
+          // ], selectedIndex: currentPageIndex, onDestinationSelected: (int index) {
+          //   setState(() {
+          //     currentPageIndex = index;
+          //   });
+          // },),
           ListTile(
             leading: Icon(Icons.home),
             title: Text('Home'),
             onTap: () {
-              // Action when Home is tapped
             },
           ),
           ListTile(
             leading: Icon(Icons.settings),
             title: Text('Settings'),
             onTap: () {
-              // Action when Settings is tapped
             },
           ),
         ],
