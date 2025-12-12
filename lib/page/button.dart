@@ -206,7 +206,6 @@ class _SingleChoiceState extends State<SingleChoice> {
       selected: <Calendar>{calendarView},
       onSelectionChanged: (Set<Calendar> newSelection) {
         setState(() {
-
           calendarView = newSelection.first;
         });
       },
