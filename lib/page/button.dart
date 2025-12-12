@@ -10,6 +10,9 @@ class ButtonPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Button Page'),
+      ),
       body: ListView(
         children: [
           Center(
