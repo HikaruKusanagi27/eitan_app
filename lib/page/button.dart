@@ -167,7 +167,7 @@ class ButtonPage extends StatelessWidget {
   }
 }
 
-
+// 公式ドキュメントを参考に実装
 class SingleChoice extends StatefulWidget {
   const SingleChoice({super.key});
 
