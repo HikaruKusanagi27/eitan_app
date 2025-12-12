@@ -14,6 +14,36 @@ class _NavigationPageState extends State<NavigationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: NavigationDrawer( // 右側のナビゲーションドロワー
+        children: [
+          DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.blue,
+            ),
+            child: Text(
+              'Navigation Drawer',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+              ),
+            ),
+          ),
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text('Home'),
+            onTap: () {
+              // Action when Home is tapped
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.settings),
+            title: Text('Settings'),
+            onTap: () {
+              // Action when Settings is tapped
+            },
+          ),
+        ],
+      ), // 右側のナビゲーションドロワー
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
