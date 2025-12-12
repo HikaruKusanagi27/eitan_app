@@ -2,6 +2,9 @@ import 'package:entan_app/page/badge.dart';
 import 'package:entan_app/page/button.dart';
 import 'package:flutter/material.dart';
 
+// 行動変更は不要とAIに指示するように作業する
+// プロパティを定義したらどのような変化をするかを考えながら作業する
+// プロパティを確認した際は型も確認するようにする
 class RoutePage extends StatelessWidget {
   const RoutePage({super.key});
 

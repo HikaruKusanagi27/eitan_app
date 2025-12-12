@@ -1,8 +1,5 @@
  import 'package:flutter/material.dart';
 
-// 行動変更は不要とAIに指示するように作業する
-// プロパティを定義したらどのような変化をするかを考えながら作業する
-
 enum Calendar {day, week, month, year}
 class ButtonPage extends StatelessWidget {
   const ButtonPage({super.key});
@@ -20,6 +17,7 @@ class ButtonPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
               IconButton(
+              tooltip: '音量アップ',
             icon: const Icon(Icons.volume_up),
             onPressed: () {},
           ),
