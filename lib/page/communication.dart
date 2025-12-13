@@ -6,7 +6,7 @@ class CommunicationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Communication Page')),
+      appBar: AppBar(title: Text('containment Page')),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
