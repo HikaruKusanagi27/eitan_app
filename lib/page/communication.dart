@@ -5,42 +5,56 @@ class BadgePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(
-        title: Text('Badge Page'),
-      )   ,
+    return Scaffold(
+      appBar: AppBar(title: Text('Badge Page')),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-            child: Text('Badge Page'),
-          ),
+          Center(child: Text('Badge Page')),
           LinearProgressIndicator(
             value: 0.7,
-            backgroundColor: Colors.grey[300],  
+            backgroundColor: Colors.grey[300],
           ),
-        SizedBox(height: 20),
-            IconButton(
+          SizedBox(height: 20),
+          IconButton(
             icon: Badge.count(
               textColor: Colors.black,
               backgroundColor: Colors.orange,
-              count: 9999, child:  Icon(Icons.notifications,
-              size: 70,
-              ),),
-            onPressed: () {
-              
-            },
+              count: 9999,
+              child: Icon(Icons.notifications, size: 70),
+            ),
+            onPressed: () {},
           ),
-           ElevatedButton( onPressed: () {
-            SnackBar snackBar = SnackBar(
-              content: Text('SnackBarが表示されました！'),
-              duration: Duration(seconds: 2),
-            );
-            ScaffoldMessenger.of(context).showSnackBar(snackBar);
-           },
-             child: Text('SnackBar')),
-        ],
+          ElevatedButton(
+            onPressed: () {
+              SnackBar snackBar = SnackBar(
+                content: Text('SnackBarが表示されました！'),
+                duration: Duration(seconds: 2),
+              );
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            },
+            child: Text('SnackBar'),
+          ),
+      TextButton(
+      onPressed: () => showDialog<String>(
+        context: context,
+        builder: (BuildContext context) => AlertDialog(
+          icon: Icon(Icons.warning, color: Colors.red),
+          iconColor: Colors.blue, // 何処のiconの色なのか理解できていない
+          title: const Text('タイトル'),
+          content: const Text('内容'),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () => Navigator.pop(context, 'Cancel'),
+              child: const Text('Cancel'),
+            ),
+            TextButton(onPressed: () => Navigator.pop(context, 'OK'), child: const Text('OK')),
+          ],
+        ),
       ),
+      child: const Text('Show Dialog'),
+      ),
+    ],),
     );
   }
 }

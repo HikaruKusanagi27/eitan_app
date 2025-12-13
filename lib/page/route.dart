@@ -1,5 +1,5 @@
-import 'package:entan_app/page/badge.dart';
-import 'package:entan_app/page/button.dart';
+import 'package:entan_app/page/communication.dart';
+import 'package:entan_app/page/actions.dart';
 import 'package:flutter/material.dart';
 
 // 行動変更は不要とAIに指示するように作業する

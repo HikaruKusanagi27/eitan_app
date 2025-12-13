@@ -1,8 +1,8 @@
  import 'package:flutter/material.dart';
 
 enum Calendar {day, week, month, year}
-class ButtonPage extends StatelessWidget {
-  const ButtonPage({super.key});
+class ActionsPage extends StatelessWidget {
+  const ActionsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
