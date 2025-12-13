@@ -53,9 +53,12 @@ class _NavigationPageState extends State<NavigationPage> {
        bottomNavigationBar: NavigationBar(
         onDestinationSelected: (int index) {
           setState(() {
-            currentPageIndex = index;
+            currentPageIndex = index; // 選択されたインデックスを更新
           });
-        }, destinations: [
+        },
+      indicatorColor: Colors.amber, // インジケーターの色を設定
+      selectedIndex: currentPageIndex, // 選択されたインデックスを設定
+      destinations: [
           NavigationDestination(
             icon: Icon(Icons.home),
             label: 'Home',
