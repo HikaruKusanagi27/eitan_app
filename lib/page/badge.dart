@@ -19,8 +19,7 @@ class BadgePage extends StatelessWidget {
             value: 0.7,
             backgroundColor: Colors.grey[300],  
           ),
-
-          SizedBox(height: 20),
+        SizedBox(height: 20),
             IconButton(
             icon: Badge.count(
               textColor: Colors.black,
@@ -28,8 +27,18 @@ class BadgePage extends StatelessWidget {
               count: 9999, child:  Icon(Icons.notifications,
               size: 70,
               ),),
-            onPressed: () {},
+            onPressed: () {
+              
+            },
           ),
+           ElevatedButton( onPressed: () {
+            SnackBar snackBar = SnackBar(
+              content: Text('SnackBarが表示されました！'),
+              duration: Duration(seconds: 2),
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+           },
+             child: Text('SnackBar')),
         ],
       ),
     );

@@ -194,5 +194,3 @@ class ButtonPage extends StatelessWidget {
     );
   }
 }
-
-// 公式ドキュメントを参考に実装
