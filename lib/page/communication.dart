@@ -10,7 +10,7 @@ class CommunicationPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(child: Text('Communication Page')),
+          Center(child: Text('Badge Page')),
           LinearProgressIndicator(
             value: 0.7,
             backgroundColor: Colors.grey[300],
@@ -35,26 +35,30 @@ class CommunicationPage extends StatelessWidget {
             },
             child: Text('SnackBar'),
           ),
-      TextButton(
-      onPressed: () => showDialog<String>(
-        context: context,
-        builder: (BuildContext context) => AlertDialog(
-          icon: Icon(Icons.warning, color: Colors.red),
-          iconColor: Colors.blue, // 何処のiconの色なのか理解できていない
-          title: const Text('タイトル'),
-          content: const Text('内容'),
-          actions: <Widget>[
-            TextButton(
-              onPressed: () => Navigator.pop(context, 'Cancel'),
-              child: const Text('Cancel'),
+          TextButton(
+            onPressed: () => showDialog<String>(
+              context: context,
+              builder: (BuildContext context) => AlertDialog(
+                icon: Icon(Icons.warning, color: Colors.red),
+                iconColor: Colors.blue, // 何処のiconの色なのか理解できていない
+                title: const Text('タイトル'),
+                content: const Text('内容'),
+                actions: <Widget>[
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, 'Cancel'),
+                    child: const Text('Cancel'),
+                  ),
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, 'OK'),
+                    child: const Text('OK'),
+                  ),
+                ],
+              ),
             ),
-            TextButton(onPressed: () => Navigator.pop(context, 'OK'), child: const Text('OK')),
-          ],
-        ),
+            child: const Text('Show Dialog'),
+          ),
+        ],
       ),
-      child: const Text('Show Dialog'),
-      ),
-    ],),
     );
   }
 }

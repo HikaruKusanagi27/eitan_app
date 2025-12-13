@@ -17,16 +17,37 @@ class RoutePage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const ActionsPage()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ActionsPage()),
+                );
               },
               child: Text('Actions Page'),
             ),
             SizedBox(height: 20),
-            ElevatedButton(onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const CommunicationPage()));
-            }, child: Text('Communication Page')),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CommunicationPage(),
+                  ),
+                );
+              },
+              child: Text('Communication Page'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CommunicationPage(),
+                  ),
+                );
+              },
+              child: Text('Communication Page'),
+            ),
           ],
         ),
       ),

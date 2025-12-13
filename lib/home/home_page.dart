@@ -2,8 +2,6 @@ import 'package:entan_app/domain/wordentry.dart';
 import 'package:entan_app/text_input.dart';
 import 'package:flutter/material.dart';
 
-
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
 
@@ -15,7 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final List<WordEntry> _words = WordEntry.values;
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

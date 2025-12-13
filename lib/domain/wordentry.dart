@@ -3,7 +3,6 @@ enum WordEntry {
   delete(term: 'delete', meaning: 'デリート'),
   signIn(term: 'sign in', meaning: 'サインイン'),
   hosting(term: 'hosting', meaning: 'ホスティング');
-  
 
   const WordEntry({required this.term, required this.meaning});
 

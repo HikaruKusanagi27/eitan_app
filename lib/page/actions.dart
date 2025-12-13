@@ -1,146 +1,164 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-enum Calendar {day, week, month, year}
+enum Calendar { day, week, month, year }
+
 class ActionsPage extends StatelessWidget {
   const ActionsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ActionsPage'),
-      ),
+      appBar: AppBar(title: const Text('ActionsPage')),
       body: ListView(
         children: [
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              IconButton(
-              tooltip: '音量アップ',
-            icon: const Icon(Icons.volume_up),
-            onPressed: () {},
-          ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed:  () {},
-                  autofocus: true,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  )
-                ), 
-                  child: const Text('Elevated'), 
-                ),
-                SizedBox(width: 20),  
-                ElevatedButton(
-                  onPressed: null, child: const Text('Elevated'),
-               ),
-              ]
-            ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(onLongPress:  () {
-                  // 長押し時の処理
-                  debugPrint('長押し');
-                }, onPressed: () {},
-                child: const Text('onLongPress'),),
-                SizedBox(width: 20),
-                ElevatedButton(
-                  onPressed: null, child: const Text('onLongPress'),
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(onHover:  (bool isHovering) {}, onPressed: () {},
-                child: const Text('onHover'),),
-                SizedBox(width: 20),
-                ElevatedButton(onPressed: null, child: const Text('onHover'),
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(onPressed:  () {},onFocusChange: (bool isFocused) {}, child: const Text('onFocusChange'),),
-                SizedBox(width: 20),
-                ElevatedButton(onPressed: null, child: const Text('onFocusChange'),
-                ),
-              ],
-            ),
-             SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                FilledButton(
-                  onPressed: () {}, child: const Text('Filled'),
-                ),
-                SizedBox(width: 20),
-                  FilledButton(
-                  onPressed: null, child: const Text('Filled'),
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                OutlinedButton(onPressed:  () {}, child: const Text('Outlined'),),
-                SizedBox(width: 20),
-                OutlinedButton(onPressed:  null, child: const Text('Outlined'),),
-              ],
-            ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextButton(
+                IconButton(
+                  tooltip: '音量アップ',
+                  icon: const Icon(Icons.volume_up),
                   onPressed: () {},
-                  style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.amber)), child: const Text("Text"),
-                  ),
-                SizedBox(width: 20),
-                TextButton(onPressed: null, child: const Text("Text"),),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      autofocus: true,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.green,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      child: const Text('Elevated'),
+                    ),
+                    SizedBox(width: 20),
+                    ElevatedButton(
+                      onPressed: null,
+                      child: const Text('Elevated'),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onLongPress: () {
+                        // 長押し時の処理
+                        debugPrint('長押し');
+                      },
+                      onPressed: () {},
+                      child: const Text('onLongPress'),
+                    ),
+                    SizedBox(width: 20),
+                    ElevatedButton(
+                      onPressed: null,
+                      child: const Text('onLongPress'),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onHover: (bool isHovering) {},
+                      onPressed: () {},
+                      child: const Text('onHover'),
+                    ),
+                    SizedBox(width: 20),
+                    ElevatedButton(
+                      onPressed: null,
+                      child: const Text('onHover'),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      onFocusChange: (bool isFocused) {},
+                      child: const Text('onFocusChange'),
+                    ),
+                    SizedBox(width: 20),
+                    ElevatedButton(
+                      onPressed: null,
+                      child: const Text('onFocusChange'),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FilledButton(onPressed: () {}, child: const Text('Filled')),
+                    SizedBox(width: 20),
+                    FilledButton(onPressed: null, child: const Text('Filled')),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    OutlinedButton(
+                      onPressed: () {},
+                      child: const Text('Outlined'),
+                    ),
+                    SizedBox(width: 20),
+                    OutlinedButton(
+                      onPressed: null,
+                      child: const Text('Outlined'),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(Colors.amber),
+                      ),
+                      child: const Text("Text"),
+                    ),
+                    SizedBox(width: 20),
+                    TextButton(onPressed: null, child: const Text("Text")),
+                  ],
+                ),
+                SizedBox(height: 20),
+                SegmentedButton<Calendar>(
+                  segments: const <ButtonSegment<Calendar>>[
+                    ButtonSegment<Calendar>(
+                      value: Calendar.day,
+                      label: Text('日'),
+                    ),
+                    ButtonSegment<Calendar>(
+                      value: Calendar.week,
+                      label: Text('週'),
+                    ),
+                    ButtonSegment<Calendar>(
+                      value: Calendar.month,
+                      label: Text('月'),
+                    ),
+                    ButtonSegment<Calendar>(
+                      value: Calendar.year,
+                      label: Text('年'),
+                    ),
+                  ],
+                  selected: const <Calendar>{Calendar.day},
+                  onSelectionChanged: (Set<Calendar> newSelection) {},
+                ),
               ],
             ),
-            SizedBox(height: 20),
-            SegmentedButton<Calendar>(
-              segments: const <ButtonSegment<Calendar>>[
-                ButtonSegment<Calendar>(
-                  value: Calendar.day,
-                  label: Text('日'),
-                ),
-                ButtonSegment<Calendar>(
-                  value: Calendar.week,
-                  label: Text('週'),
-                ),
-                ButtonSegment<Calendar>(
-                  value: Calendar.month,
-                  label: Text('月'),
-                ),
-              ButtonSegment<Calendar>(
-                  value: Calendar.year,
-                  label: Text('年'),
-                ),
-              ],
-              selected: const <Calendar>{Calendar.day},
-              onSelectionChanged: (Set<Calendar> newSelection) {
-            
-              },
-            ),
-            ],
           ),
-        ),
-      ],
-    ),
+        ],
+      ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -179,7 +197,7 @@ class ActionsPage extends StatelessWidget {
             child: Icon(Icons.add),
           ),
           SizedBox(height: 20),
-            FloatingActionButton.large(
+          FloatingActionButton.large(
             onPressed: () {},
             tooltip: '追加',
             foregroundColor: Colors.red,
