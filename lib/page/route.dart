@@ -1,6 +1,7 @@
 import 'package:entan_app/page/communication.dart';
 import 'package:entan_app/page/actions.dart';
 import 'package:entan_app/page/containment.dart';
+import 'package:entan_app/page/navigatiton.dart';
 import 'package:flutter/material.dart';
 
 // 行動変更は不要とAIに指示するように作業する
@@ -27,7 +28,7 @@ class RoutePage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
+            onPressed: () { 
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -48,6 +49,18 @@ class RoutePage extends StatelessWidget {
                 );
               },
               child: Text('Containment Page'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const NavigationPage(),
+                  ),
+                );
+              },
+              child: Text('Navigation Page'),
             ),
           ],
         ),
