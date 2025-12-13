@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class BadgePage extends StatelessWidget {
-  const BadgePage({super.key});
+class CommunicationPage extends StatelessWidget {
+  const CommunicationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Badge Page')),
+      appBar: AppBar(title: Text('Communication Page')),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(child: Text('Badge Page')),
+          Center(child: Text('Communication Page')),
           LinearProgressIndicator(
             value: 0.7,
             backgroundColor: Colors.grey[300],
