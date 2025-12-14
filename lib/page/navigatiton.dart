@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 
-class NavigationPage extends StatelessWidget {
+class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
 
+  @override
+  State<NavigationPage> createState() => _NavigationPageState();
+}
+
+class _NavigationPageState extends State<NavigationPage> {
+
+  int currentPageIndex = 0;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,27 +50,25 @@ class NavigationPage extends StatelessWidget {
       body: Center(
         child: Text('Navigation Page'),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        landscapeLayout: BottomNavigationBarLandscapeLayout.centered, // 横向きレイアウトの設定
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
+       bottomNavigationBar: NavigationBar(
+        onDestinationSelected: (int index) {
+          setState(() {
+            currentPageIndex = index;
+          });
+        }, destinations: [
+          NavigationDestination(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
+          NavigationDestination(
+            icon: Icon(Icons.business),
+            label: 'Business',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+          NavigationDestination(
+            icon: Icon(Icons.school),
+            label: 'School',
           ),
         ],
-        currentIndex: 0, // 選択されているインデックス
-        selectedItemColor: Colors.red, // 選択されたアイテムの色
-        unselectedItemColor: Colors.grey, // 選択されていないアイテムの色
-        onTap: (index) {
-        },
       ),
     );
   }
